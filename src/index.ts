@@ -34,3 +34,25 @@ function calculateAverage(student: Student): number {
   const average = sum / Object.keys(student.scores).length;
   return average;
 }
+
+function createStudent(
+  name: string,
+  age: number,
+  korean: number,
+  math: number,
+  society: number,
+  science: number,
+  english: number
+): Student {
+  return {
+    name,
+    age,
+    scores: {
+      korean,
+      math,
+      society,
+      science,
+      english,
+    },
+  };
+}
