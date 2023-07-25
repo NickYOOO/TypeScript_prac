@@ -56,3 +56,18 @@ function createStudent(
     },
   };
 }
+
+function printResult(student: Student): void {
+  const average = calculateAverage(student);
+  const grade = assignGrade(average);
+  console.log(
+    `${student.name} (${student.age}세) - 평균: ${average.toFixed(
+      2
+    )}, 학점: ${grade}`
+  );
+}
+
+function main(): void {
+  const spartan = createStudent('Spartan', 30, 95, 89, 76, 90, 97);
+  printResult(spartan);
+}
