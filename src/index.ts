@@ -23,3 +23,14 @@ function assignGrade(average: number): string {
     return 'F';
   }
 }
+
+function calculateAverage(student: Student): number {
+  const sum =
+    student.scores.korean +
+    student.scores.math +
+    student.scores.society +
+    student.scores.science +
+    student.scores.english;
+  const average = sum / 5;
+  return average;
+}
