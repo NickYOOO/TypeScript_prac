@@ -31,6 +31,6 @@ function calculateAverage(student: Student): number {
     student.scores.society +
     student.scores.science +
     student.scores.english;
-  const average = sum / 5;
+  const average = sum / Object.keys(student.scores).length;
   return average;
 }
